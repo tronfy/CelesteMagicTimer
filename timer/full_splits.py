@@ -342,7 +342,9 @@ def format_splits(sm, termsize=True):
     return data.rstrip()
 
 def print_splits(sm, formatter):
-    print('\x1b[H\x1b[J' + formatter(sm), end='')  # move to origin; erase screen
+    ret = formatter(sm)
+    if ret is not None:
+        print('\x1b[H\x1b[J' + formatter(sm), end='')  # move to origin; erase screen
 
 def main(route, pb=None, best=None, renderer=None):
     if pb is None and best is None and type(route) is str:

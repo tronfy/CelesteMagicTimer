@@ -1,3 +1,5 @@
+eventlet
 pycairo
 PyGObject
 pynput
+PyYaml

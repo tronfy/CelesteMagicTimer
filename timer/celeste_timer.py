@@ -408,7 +408,7 @@ class Route(collections.UserList):
             prev = split
 
 class SplitsManager:
-    def __init__(self, asi, route, compare_pb=None, compare_best=None):
+    def __init__(self, asi: AutoSplitterInfo, route, compare_pb=None, compare_best=None):
         self.asi = asi
         self.route = route
         self.compare_pb = compare_pb if compare_pb is not None else SplitsRecord()
